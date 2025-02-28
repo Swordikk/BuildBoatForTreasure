@@ -11,14 +11,14 @@ local function AutoFarmMoney()
 			local character = localplayer.Character
 			local humanoid = character.Humanoid
 			local humanoidrootpart = character.HumanoidRootPart
-			local CaveStage = workspace.BoatStages.NormalStages["CaveStage" .. i].DarknessPart
+			local caveStage = workspace.BoatStages.NormalStages["CaveStage" .. i].DarknessPart
 
 			local newpart = Instance.new("Part")
 			newpart.Parent = Workspace
 			newpart.Size = Vector3.new(5, 1, 5)
 			newpart.Anchored = true
-			newpart.CFrame = CaveStage.CFrame
-			humanoidrootpart.CFrame = CaveStage.CFrame
+			newpart.CFrame = caveStage.CFrame
+			humanoidrootpart.CFrame = caveStage.CFrame
 			wait(2)
 			for _, v in pairs(workspace:GetChildren()) do
     			if v:IsA("Part") then
@@ -26,8 +26,8 @@ local function AutoFarmMoney()
     			end
 			end
 		end
-		Character:BreakJoints()
-		wait(5.1)
+		--character:BreakJoints()
+		wait(5.5)
 	end
 end
 
