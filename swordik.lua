@@ -1,6 +1,3 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Build a boat for Treasure", HidePremium = true, SaveConfig = true, ConfigFolder = "OrionTest"})
-
 local players = game:GetService("Players")
 
 -- Functions --
@@ -30,31 +27,5 @@ local function AutoFarmMoney()
 		wait(5.5)
 	end
 end
-
-
-local Tab = Window:MakeTab({
-	Name = "Main",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Tab = Window:MakeTab({
-	Name = "AutoFarm",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-Tab:AddToggle({
-	Name = "AutoFarmMoney",
-	Default = false,
-	Callback = function(Value)
-		_G.AutoFarmMoney = Value
-		AutoFarmMoney()
-	end    
-})
-
-local Tab = Window:MakeTab({
-	Name = "Misc",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
+_G.AutoFarmMoney = true
+AutoFarmMoney()
